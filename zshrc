@@ -103,10 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export EDITOR=vim
+export EDITOR=nvim
 
 alias vim=nvim
-alias afterburner=/home/tristan/Applications/afterburner/afterburner
 alias ls=lsd
 alias cp='cp -i'
 alias mv='mv -i'
