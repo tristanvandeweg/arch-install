@@ -8,10 +8,13 @@ cd ./yay-git/
 makepkg -si
 cd ./..
 # install utilities
-sudo pacman -S tmux zsh cmatrix nano --noconfirm
+sudo pacman -S tmux zsh cmatrix nano lsd neoftch --noconfirm
 # install oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-# install kde
-sudo pacman -S plasma sddm sddm-kcm blender gimp libreoffice inkscape grub-customizer --noconfirm
+# install kde and applications
+sudo pacman -S plasma sddm sddm-kcm blender gimp libreoffice inkscape grub-customizer discord keepassxc thunderbird kicad kicad-library kicad-library-3d --noconfirm
 sudo systemctl enable sddm
 sudo pacman -S kde-applications-meta --noconfirm
+
+# copy configs
+cp ./zshrc ~/.zshrc
