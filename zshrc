@@ -87,5 +87,7 @@ alias ls=lsd
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-
+alias symlink='ln -s'
+if [[ $TERM_APP ==  'konsole' ]]; then 
 neofetch | lolcat --spread=1
+fi
