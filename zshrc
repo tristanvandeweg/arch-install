@@ -82,12 +82,23 @@ source $ZSH/oh-my-zsh.sh
 # export ARCHFLAGS="-arch x86_64"
 export EDITOR=nvim
 
+#Aliases
 alias vim=nvim
 alias ls=lsd
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
 alias symlink='ln -s'
+
+#Aliases for rsync
+cpr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
+} 
+mvr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
+}
+
+#Startup command
 if [[ $TERM_APP ==  'konsole' ]]; then 
 neofetch | lolcat --spread=1
 fi
