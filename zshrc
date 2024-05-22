@@ -98,9 +98,6 @@ mvr() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
 }
 
-#Set environment variable to have make use all cpu cores
-env MAKEFLAGS="-j $(nproc)"
-
 #Startup command
 if [[ $TERM_APP ==  'konsole' ]]; then 
 neofetch | lolcat --spread=1
