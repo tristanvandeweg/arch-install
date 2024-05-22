@@ -99,7 +99,7 @@ mvr() {
 }
 
 #Set environment variable to have make use all cpu cores
-MAKEFLAGS="-j$(nproc)"
+env MAKEFLAGS="-j $(nproc)"
 
 #Startup command
 if [[ $TERM_APP ==  'konsole' ]]; then 
