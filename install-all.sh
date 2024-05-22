@@ -3,12 +3,12 @@
 # install intel drivers base packages and xorg
 sudo pacman -S xf86-video-intel xorg xorg-xinit konsole firefox git base-devel vim xf86-input-wacom --noconfirm
 # install yay
-git clone https://aur.archlinux.org/yay-git.git
-cd ./yay-git/
+git clone https://aur.archlinux.org/yay.git
+cd ./yay/
 makepkg -si
 cd ./..
 # install utilities
-sudo pacman -S tmux zsh cmatrix nano vim nvim lsd neoftch --noconfirm
+sudo pacman -S tmux zsh cmatrix nano vim nvim lsd neofetch --noconfirm
 # install oh-my-zsh
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 # install kde and applications
