@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install packages
-sudo pacman -S sudo wget git lsd awesome zsh tmux emacs lightdm-gtk-greeter xterm firefox net-tools --noconfirm
+sudo pacman -S sudo wget git lsd awesome zsh tmux emacs lightdm-gtk-greeter xterm firefox net-tools htop --noconfirm
 
 # install yay
 cd ~
