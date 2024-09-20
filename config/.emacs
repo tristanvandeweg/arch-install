@@ -4,12 +4,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(solarized-dark-high-contrast))
- '(custom-safe-themes
-   '("7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "524fa911b70d6b94d71585c9f0c5966fe85fb3a9ddd635362bfabd1a7981a307" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
- '(dired-listing-switches "-al")
- '(package-selected-packages
-   '(dad-joke spotify auto-complete rainbow-delimiters speed-type highlight-indentation clippy minesweeper fireplace nyan-mode enlight magit ef-themes)))
+'(custom-enabled-themes '(solarized-dark-high-contrast))
+'(custom-safe-themes
+	'("7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "524fa911b70d6b94d71585c9f0c5966fe85fb3a9ddd635362bfabd1a7981a307" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
+'(dired-listing-switches "-al")
+'(package-selected-packages
+	'(forge rust-mode rainbow-mode lua-mode dad-joke spotify auto-complete rainbow-delimiters speed-type highlight-indentation clippy minesweeper fireplace nyan-mode enlight magit ef-themes))
+'(whitespace-style
+	'(face trailing spaces missing-newline-at-eof empty indentation space-after-tab space-before-tab space-mark tab-mark)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -32,7 +34,7 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 ;; start maximized
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
 ;; default minor modes
 (add-hook 'find-file-hook 'hl-line-mode)
 (add-hook 'find-file-hook 'display-line-numbers-mode)
@@ -40,8 +42,10 @@
 (global-set-key (kbd "TAB") 'self-insert-command)
 (setq-default tab-width 4)
 (electric-pair-mode)
+(add-hook 'find-file-hook 'rainbow-mode)
 (add-hook 'find-file-hook 'auto-complete-mode)
 (add-hook 'find-file-hook 'rainbow-delimiters-mode)
+(add-hook 'find-file-hook 'whitespace-mode)
 ;; custom startup menu
 (use-package enlight
   :custom
