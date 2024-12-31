@@ -4,14 +4,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-'(custom-enabled-themes '(solarized-dark-high-contrast))
-'(custom-safe-themes
-	'("7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "524fa911b70d6b94d71585c9f0c5966fe85fb3a9ddd635362bfabd1a7981a307" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
-'(dired-listing-switches "-al")
-'(package-selected-packages
-	'(forge rust-mode rainbow-mode lua-mode dad-joke spotify auto-complete rainbow-delimiters speed-type highlight-indentation clippy minesweeper fireplace nyan-mode enlight magit ef-themes))
-'(whitespace-style
-	'(face trailing spaces missing-newline-at-eof empty indentation space-after-tab space-before-tab space-mark tab-mark)))
+ '(custom-enabled-themes '(solarized-dark-high-contrast))
+ '(custom-safe-themes
+   '("7f1d414afda803f3244c6fb4c2c64bea44dac040ed3731ec9d75275b9e831fe5" "524fa911b70d6b94d71585c9f0c5966fe85fb3a9ddd635362bfabd1a7981a307" "fee7287586b17efbfda432f05539b58e86e059e78006ce9237b8732fde991b4c" default))
+ '(dired-listing-switches "-al")
+ '(package-selected-packages
+   '(json-mode forge rust-mode rainbow-mode lua-mode dad-joke spotify auto-complete rainbow-delimiters speed-type highlight-indentation clippy minesweeper fireplace nyan-mode enlight magit ef-themes))
+ '(whitespace-style
+   '(face trailing spaces missing-newline-at-eof empty indentation space-after-tab space-before-tab space-mark tab-mark)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -60,9 +60,13 @@
 			("Locations"
 				("Documents" (dired "~/Documents") "d")
 				("Downloads" (dired "~/Downloads") "a"))
+			("Config files"
+				("Emacs" (find-file "~/.emacs") "e")
+				("Hyprland" (find-file "~/.config/hypr/hyprland.conf") "h")
+				("Waybar" (find-file "~/.config/waybar/config.jsonc") "w")
+				("Kitty" (find-file "~/.config/kitty/kitty.conf") "k"))
 			("Other"
 				("Projects" project-switch-project "p")
-				("Edit config" (find-file "~/.emacs") "e")
 				("Emacs directory" (dired "~/.emacs.d/") "r")
 ))))))
 (setopt initial-buffer-choice #'enlight)

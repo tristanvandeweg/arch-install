@@ -2,8 +2,13 @@
 
 cd ~/arch-install/config
 
-cp --update=older -R ./awesome ~/.config/
-cp --update=older -R ./.emacs.d ~/
-cp --update=older ./.Xresources ~/
-cp --update=older ./.zshrc ~/
-cp --update=older ./.emacs ~/
+copy='cp --update=older'
+
+copy -R ./awesome ~/.config/
+copy -R ./.emacs.d ~/
+copy ./.Xresources ~/
+copy ./.zshrc ~/
+copy ./.emacs ~/
+copy -R ./hypr ~/.config/
+copy -R ./waybar ~/.config/
+copy -R ./kitty ~/.config/
